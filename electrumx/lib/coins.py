@@ -2930,14 +2930,13 @@ class Noir(Coin):
     NET = "mainnet"
     XPUB_VERBYTES = bytes.fromhex("0488b21e")
     XPRV_VERBYTES = bytes.fromhex("0488ade4")
-    P2SH_VERBYTES = (bytes.fromhex("07"),)
-    WIF_BYTE = bytes.fromhex("D0")
-    GENESIS_HASH = ('23911212a525e3d149fcad6c559c8b17'
-                    'f1e8326a272a75ff9bb315c8d96433ef')
-    RPC_PORT = 8825
-    TX_COUNT = 586369
-    TX_COUNT_HEIGHT = 379290
-    TX_PER_BLOCK = 5
+    P2PKH_VERBYTE = bytes.fromhex("8f")
+    P2SH_VERBYTES = (bytes.fromhex("71")
+    WIF_BYTE = bytes.fromhex("53")
+    GENESIS_HASH = ('000006a09dc95e0eb30c677e1c8a0108'
+                    '0e2c49d1dd22ad1479492c61ffde9177')
+    DESERIALIZER = lib_tx.DeserializerSegWit
+    RPC_PORT = 6021
 
 
 class BitcoinPlus(Coin):
